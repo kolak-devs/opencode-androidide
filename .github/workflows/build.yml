@@ -1,4 +1,4 @@
-name: Build OpenCode for Android/Termux
+name: Build OpenCode for AndroidIde
 
 on:
   push:

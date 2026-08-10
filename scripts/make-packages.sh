@@ -45,10 +45,10 @@ echo "    Created $ZIP_NAME"
 # ==========================================
 echo ">>> Creating pacman package..."
 PACMAN_STAGING="$PKG_DIR/pacman-staging"
-mkdir -p "$PACMAN_STAGING/data/data/com.termux/files/usr/bin"
+mkdir -p "$PACMAN_STAGING/data/data/com.itsaky.androidide/files/usr/bin"
 
-cp "$OPENCODE_BINARY" "$PACMAN_STAGING/data/data/com.termux/files/usr/bin/opencode"
-chmod 755 "$PACMAN_STAGING/data/data/com.termux/files/usr/bin/opencode"
+cp "$OPENCODE_BINARY" "$PACMAN_STAGING/data/data/com.itsaky.androidide/files/usr/bin/opencode"
+chmod 755 "$PACMAN_STAGING/data/data/com.itsaky.androidide/files/usr/bin/opencode"
 
 # Create .PKGINFO
 cat > "$PACMAN_STAGING/.PKGINFO" << EOF
@@ -74,11 +74,11 @@ echo "    Created $PACMAN_NAME"
 # ==========================================
 echo ">>> Creating deb package..."
 DEB_STAGING="$PKG_DIR/deb-staging"
-mkdir -p "$DEB_STAGING/data/data/data/com.termux/files/usr/bin"
+mkdir -p "$DEB_STAGING/data/data/data/com.itsaky.androidide/files/usr/bin"
 mkdir -p "$DEB_STAGING/DEBIAN"
 
-cp "$OPENCODE_BINARY" "$DEB_STAGING/data/data/data/com.termux/files/usr/bin/opencode"
-chmod 755 "$DEB_STAGING/data/data/data/com.termux/files/usr/bin/opencode"
+cp "$OPENCODE_BINARY" "$DEB_STAGING/data/data/data/com.itsaky.androidide/files/usr/bin/opencode"
+chmod 755 "$DEB_STAGING/data/data/data/com.itsaky.androidide/files/usr/bin/opencode"
 
 # Create control file
 INSTALLED_SIZE=$((BINARY_SIZE / 1024))
@@ -120,4 +120,4 @@ echo ""
 echo "Install on Termux:"
 echo "  pacman -U $PACMAN_NAME"
 echo "  dpkg -i $DEB_NAME"
-echo "  unzip $ZIP_NAME -d /data/data/com.termux/files/usr/bin/"
+echo "  unzip $ZIP_NAME -d /data/data/com.itsaky.androidide/files/usr/bin/"

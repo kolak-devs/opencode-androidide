@@ -63,7 +63,7 @@ cat > "$TINYCC_SRC/config.h" <<'CONFEOF'
 #define TCC_VERSION "0.9.27"
 #define TCC_TARGET_ARM64 1
 #define CONFIG_TCC_CROSSPREFIX ""
-#define CONFIG_TCCDIR "/data/data/com.termux/files/usr/lib/tcc"
+#define CONFIG_TCCDIR "/data/data/com.itsaky.androidide/files/usr/lib/tcc"
 CONFEOF
 
 for src in "${SOURCES[@]}"; do
